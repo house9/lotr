@@ -2,8 +2,8 @@
 source "http://rubygems.org"
 
 # gem "rails"
-gem 'sanitize', '2.0.0'
-gem 'gollum', "2.0.0", require: 'gollum/frontend/app'
+gem 'sanitize'
+gem 'gollum', require: 'gollum/app'
 gem 'rack-rewrite', require: 'rack/rewrite'
 gem 'sinatra', require: 'sinatra/base'
 gem 'active_support', require: 'active_support/core_ext/hash'

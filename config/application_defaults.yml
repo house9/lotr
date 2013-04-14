@@ -11,8 +11,10 @@ gollum:
   # NOTE: You're responsible for initializing a repository at this
   # location.
   repo_path: <%= ENV['GOLLUM_REPO_PATH'] %>
+  live_preview: false
+  base_path: 'wiki'
 
-google:   
+google:
   # If a plain OpenID flow is used, require logins from this domain.
   domain: <%= ENV['GOOGLE_AUTH_DOMAIN'] || 'salesforce.com' %>
 
@@ -20,6 +22,6 @@ google:
   # If either of these are nil, oAuth2 will not be available.
   oauth2_key: <%= ENV['GOOGLE_OAUTH2_KEY'] %>
   oauth2_secret: <%= ENV['GOOGLE_OAUTH2_SECRET'] %>
-  
-  
+
+
 

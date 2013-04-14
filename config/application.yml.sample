@@ -3,8 +3,12 @@ gollum:
   # NOTE: You're responsible for initializing a repository at this
   # location.
   repo_path: '/usr/local/etc/company-wiki'
+  # WARNING: live_preview: true doesn't work yet
+  live_preview: false
+  # mount the wiki at http://example.com/wiki
+  base_path: 'wiki'
 
-google:   
+google:
   # If a plain OpenID flow is used, require logins from this domain.
   domain: 'do.com'
 

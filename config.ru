@@ -58,7 +58,7 @@ class App < Sinatra::Base
     if not session[:user]
       erb :login
     else
-      redirect '/wiki'
+      redirect "/#{CONFIG[:gollum][:base_path]}"
     end
   end
 
@@ -82,11 +82,7 @@ class App < Sinatra::Base
 
 end
 
-use Rack::Rewrite do
-  rewrite %r{/(javascript|css|edit|create|preview|compare)(.*)}, '/wiki/$1$2'
-end
-
-map '/wiki' do
+map "/#{CONFIG[:gollum][:base_path]}" do
   run Wiki.new
 end
 
